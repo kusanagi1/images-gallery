@@ -1,5 +1,6 @@
-from logging import DEBUG
-import requests, os
+""" This is the main api code"""
+import os
+import requests
 from flask import Flask, request
 from dotenv import load_dotenv
 from flask_cors import CORS
@@ -19,6 +20,7 @@ CORS(app)
 
 @app.route("/new-image")
 def new_image():
+    """This defines the endpoint function"""
     word = request.args.get("query")
     headers = {"Accept-Version": "v1", "Authorization": "Client-ID " + UNSPLASH_KEY}
     params = {"query": word}
