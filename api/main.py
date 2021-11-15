@@ -22,13 +22,14 @@ CORS(app)
 def new_image():
     """This defines the endpoint function"""
     word = request.args.get("query")
-    headers = {"Accept-Version": "v1", "Authorization": "Client-ID " + UNSPLASH_KEY}
-    params = {"query": word}
-    response = requests.get(url=UNSPLASH_URL, headers=headers, params=params)
+    if word:
+        headers = {"Accept-Version": "v1", "Authorization": "Client-ID " + UNSPLASH_KEY}
+        params = {"query": word}
+        response = requests.get(url=UNSPLASH_URL, headers=headers, params=params)
 
-    data = response.json()
+        data = response.json()
 
-    return data
+        return data
 
 
 # def hello():
