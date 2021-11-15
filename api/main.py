@@ -27,7 +27,10 @@ def new_image():
     response = requests.get(url=UNSPLASH_URL, headers=headers, params=params)
 
     data = response.json()
-    return data
+    if data["errors"]:
+        pass
+    else:
+        return data
 
 
 # def hello():
