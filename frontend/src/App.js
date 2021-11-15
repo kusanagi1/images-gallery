@@ -6,7 +6,8 @@ import ImageCard from './components/ImageCard';
 import Welcome from './components/Welcome';
 import { Container, Row, Col } from 'react-bootstrap';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://10.40.247.134:2222/'
+/* Change the http://X.X.X.X:[port]/ you set for your application */
+const API_URL = process.env.REACT_APP_API_URL || 'http://10.10.17.122:2222/'
 
 const App = () => {
   const [word, setWord] = useState('');
