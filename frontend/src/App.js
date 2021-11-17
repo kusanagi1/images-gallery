@@ -7,7 +7,7 @@ import Welcome from './components/Welcome';
 import { Container, Row, Col } from 'react-bootstrap';
 
 /* Change the http://X.X.X.X:[port]/ to what you set for your application */
-const API_URL = process.env.REACT_APP_API_URL || 'http://10.10.17.122:2222/'
+const API_URL = process.env.REACT_APP_API_URL || 'http://10.40.247.134:2222/'
 
 const App = () => {
   const [word, setWord] = useState('');
